@@ -1,0 +1,5 @@
+Dir.glob("*.html") do |file|
+name=file.to_s.split(".")
+uneVar=name[0]
+puts `wkhtmltopdf #{file} #{uneVar}.pdf`
+end

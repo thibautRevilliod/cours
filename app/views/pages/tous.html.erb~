@@ -1,0 +1,17 @@
+<h1>Liste des cours</h1>
+<p><ul>
+	<%Dir.chdir("public/cours") do
+		Dir.glob("*.txt").each do |nom| %>
+		<li><%= nom %></li>
+	<%	end
+	  end%>
+   </ul>
+</p>
+
+<p>
+<% link_to 'html', '/cours/html' %>
+<% link_to 'pdf', '/cours/pdf' %>
+</p> 
+
+<p><br/><br/>Find me in app/views/cours/tous.html.erb</p>
+
