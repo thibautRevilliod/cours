@@ -1,14 +1,12 @@
 Cours::Application.routes.draw do
-  get "pages/html"
-
-  get "pages/pdf"
-
-  get "pages/tous"
-
-match '/', :to => 'pages#tous'
 
 
-#root :to => "pages#tous"
+  match '/html', :to => 'pages#html'
+  match '/pdf',   :to => 'pages#pdf'
+
+
+  root :to => 'pages#home'
+
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
